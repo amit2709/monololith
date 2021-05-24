@@ -1,0 +1,180 @@
+.img-row{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  column-gap: 10px;
+  row-gap: 10px;
+  margin: 0 10px 42px;
+}
+
+.show-prod-img{
+  width: 100%;
+  height: 135px; 
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prod-info{
+  padding: 10px;
+  text-align: left;
+}
+
+.prod-desc{
+  font-size: 25px;
+  letter-spacing: 0.63;
+  font-weight: 300;
+  margin-top: 36px;
+}
+
+.attributes-group-select{
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.attribute-filter{
+    font-size: 20px;
+    padding: 14px;
+    width: 230px;
+    margin: 10px 0 10px 10px;
+    border: solid 1px #d5d5d5;
+    font-weight: 300;
+    color: #2c2b2a;
+    font-family:'Roboto Condensed', sans-serif !important;
+}
+
+.quantity-title{
+  font-size: 30px;
+  letter-spacing: 0.75px;
+  color: #2c2b2a;
+  font-weight: 300;
+}
+
+.quantity-button{
+  width: 35px;
+  height: 35px;
+  padding: 16px 8px;
+  border: solid 1px #d5d5d5;
+  margin: 0px 17px 26px 26px;
+  font-size: 30px;
+  line-height: 0px;
+}
+
+.quantity-display{
+  padding: 10px 25px 10px;
+  font-size: 32px;
+  border-radius: 5px;
+  border: solid 0.3px #c4c4c4;
+  margin-left: 10px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.add-to-cart{
+  margin: 45px 0;
+  width: 90%;
+  height: 104px;
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: 0.9px;
+  font-weight: bold;
+  background: linear-gradient(#34ceb3, #31a893 );;
+  box-shadow: 0px 1px 3px 0 rgba(7, 7, 8, 0.46);
+  border: none;
+}
+
+.main-img{
+  width: 100%;
+}
+
+.show-main-img{
+  margin: 10px;
+}
+
+.quantity-group{
+  margin-left: 10px;
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+  
+  .main-img{
+    height: 600px;
+  }
+
+  .attribute-filter{
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .quantity-display{
+    width: 200px;
+  }
+  
+}
+
+@media (min-width: 1025px) {
+  .prod-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 20px;
+  }
+
+  .prod-name{
+    font-size: 28px;
+    letter-spacing: 0.7px;
+  }
+
+  .price{
+    font-size: 18px;
+  }
+
+  .attribute-filter{
+    width: 92%;
+    font-size: 15px;
+  }
+
+  .prod-desc{
+    font-size: 15px;
+    letter-spacing: 0.38px;
+  }
+
+  .quantity-title{
+    font-size: 15px;
+    letter-spacing: 0.38px
+  }
+  .quantity-button{
+    width: 17px;
+    height: 17px;
+    padding: 0 0;
+    border: solid 1px #d5d5d5;
+    margin: 0px 17px 26px 26px;
+    font-size: 17px;
+    line-height: 0px;
+  }
+
+  .quantity-display{
+    width: 85px;
+    height: 25px;
+    font-size: 16px;
+    padding: 14px 41px 14px 39px;
+  }
+
+  .add-to-cart{
+    margin: 45px 0;
+    width: 95%;
+    height: 51px;
+    font-size: 18px;
+    letter-spacing: 0.45px;
+  }
+
+  .main-img{
+    width: 100%;
+    height: 425px;
+  }
+}

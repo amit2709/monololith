@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import { getList } from './services/list';
+import ProductsList from './component/ProductsList';
+import Product from './component/Product';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
+  const [list, setList] = useState([]);
+  const [product, setProduct] = useState();
+
+  useEffect(() => {
+    let mounted = true;
+    getList().then((items) => {
+      if (mounted) {
+        setList(items.data);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <div className="header">
+          <div className='header-text'>SPECTR<span className="blue-letter">U</span>M</div>
+          <div className="border"></div>
+          <Link className="blue-letter home-link" to='/'>HOME</Link>
+        </div>
+          <Route exact path='/'>
+            <ProductsList list={list} />
+          </Route>
+          <Route path='/product/:pid'>
+            <Product />
+          </Route>
+      </Router>
+      
+    </>
   );
 }
 
